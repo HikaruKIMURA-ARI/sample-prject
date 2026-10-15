@@ -1,0 +1,35 @@
+[tools]
+node = "24.22.0"
+pnpm = "10.34.7"
+
+[tasks.install]
+description = "依存パッケージのインストール"
+run = "pnpm install"
+
+[tasks.dev]
+description = "ローカル開発サーバーの起動"
+run = "pnpm run dev"
+
+[tasks.build]
+description = "アプリケーションのビルド"
+run = "pnpm run build"
+
+[tasks.preview]
+description = "ビルド成果物のローカルプレビュー"
+run = "pnpm run build && pnpm exec vite preview"
+
+[tasks.lint]
+description = "ESLintによる静的解析"
+run = "pnpm run lint"
+
+[tasks.check]
+description = "型チェック・ビルド・デプロイのドライラン確認"
+run = "pnpm run check"
+
+[tasks.deploy]
+description = "Cloudflare Workersへのデプロイ"
+run = "pnpm run deploy"
+
+[tasks.cf-typegen]
+description = "Cloudflare Workersの型定義(worker-configuration.d.ts)を生成"
+run = "pnpm run cf-typegen"
