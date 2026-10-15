@@ -19,8 +19,20 @@ description = "ビルド成果物のローカルプレビュー"
 run = "pnpm run build && pnpm exec vite preview"
 
 [tasks.lint]
-description = "ESLintによる静的解析"
+description = "Oxlintによる静的解析"
 run = "pnpm run lint"
+
+[tasks."lint:fix"]
+description = "Oxlintによる自動修正"
+run = "pnpm run lint:fix"
+
+[tasks.format]
+description = "Oxfmtによるコードフォーマット"
+run = "pnpm run format"
+
+[tasks."format:check"]
+description = "Oxfmtによるフォーマットチェック"
+run = "pnpm run format:check"
 
 [tasks.check]
 description = "型チェック・ビルド・デプロイのドライラン確認"
